@@ -224,12 +224,16 @@ local function digLayer()
 end
 
 
-io.write(" -s: shutdown when done.")
+io.write("hello")
 
 -- repeat until not digLayer()
 moveTo(1, 0, 0)
 turnTowards(1)
 -- checkedDrop(true)
+
+local movable, thing = r.detect()
+
+io.write(thing)
 
 if options.s then
   computer.shutdown()

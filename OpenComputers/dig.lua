@@ -223,10 +223,13 @@ local function digLayer()
   return true
 end
 
-repeat until not digLayer()
-moveTo(0, 0, 0)
-turnTowards(0)
-checkedDrop(true)
+
+io.write(" -s: shutdown when done.")
+
+-- repeat until not digLayer()
+moveTo(1, 0, 0)
+turnTowards(1)
+-- checkedDrop(true)
 
 if options.s then
   computer.shutdown()
